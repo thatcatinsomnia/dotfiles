@@ -1,0 +1,276 @@
+:root {
+	--h-gap: 12px;
+	--notification-icon-size: 64px;
+
+	--color-green: #a1ea9b;
+	--color-white: #f6f7fa;
+	--color-primary: #fd588a;
+	--color-btn-hover: #373744;
+}
+
+* {
+	all: unset;
+	font-family: JetBrainsMono;
+}
+
+.control-center {
+	padding: 12px 0px;
+	background: #2d2d3b;
+	border-radius: 6px;
+	color: var(--color-white);
+	box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.control-center .control-center-list-placeholder {
+	opacity: 0.28;
+}
+
+.control-center .control-center-list-placeholder image {
+}
+
+.widget-title {
+	padding-left: var(--h-gap);
+	padding-right: var(--h-gap);
+	margin-bottom: 12px;
+}
+
+.widget-title > label {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+/* "Clear All" button styles */
+.control-center-clear-all {
+	padding: 4px 12px;
+	font-size: 12px;
+	border-radius: 4px;
+	background: #404053;
+}
+
+/* disabled state, will apply styles when no notifications */
+.control-center-clear-all:disabled {
+	opacity: 0;
+}
+
+.control-center-clear-all:hover {
+	background: var(--color-btn-hover);
+}
+
+.widget-dnd {
+	margin-bottom: 12px;
+	padding-left: var(--h-gap);
+	padding-right: var(--h-gap);
+}
+
+.widget-dnd label {
+	color: #d4d5df;
+}
+
+.widget-dnd > switch {
+	padding: 2px;
+	background: #7f7f8d;
+	border-radius: 4px;
+}
+
+.widget-dnd > switch:checked {
+	background: var(--color-green);
+}
+
+.widget-dnd > switch slider {
+	background: #2d2d3b;
+	border-radius: 4px;
+}
+
+/* notification area wrapper */
+.control-center-list {
+	margin-top: 8px;
+	padding-left: var(--h-gap);
+	padding-right: var(--h-gap);
+	padding-bottom: 8px;
+}
+
+.close-button {
+	padding: 1px;
+	border-radius: 4px;
+}
+
+.close-button:hover {
+	background: #4b4b52;
+}
+
+.notification-group.collapsed.not-expanded {
+	opacity: 0.4;
+}
+
+.notification-group + .notification-group {
+	margin-top: 8px;
+}
+
+.notification-group-headers {
+	font-size: 16px;
+}
+
+.notification-group-icon {
+	margin-right: 4px;
+}
+
+/* right side collapse/close all button */
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+	padding: 4px 6px;
+	border-radius: 4px;
+}
+
+.notification-group-collapse-button:hover,
+.notification-group-close-all-button:hover {
+	background: #ffffff14;
+}
+
+.floating-notifications .notification-row {
+	margin-top: 8px;
+}
+
+/* the slide in notification on top right */
+.floating-notifications .notification {
+	margin-right: 4px;
+}
+
+.floating-notifications .close-button {
+	margin-right: 4px;
+	margin-top: 0px;
+}
+
+/* notificaiton wrapper */
+.notification-row {
+	margin-top: 8px;
+}
+
+/* each notification item */
+.notification {
+	padding: 8px 12px;
+	background: #363644;
+	border-radius: 4px;
+	min-height: 40px;
+	font-size: 14px;
+}
+
+.notification .notification-content .image {
+	margin-right: 8px;
+	border-radius: 6px;
+	-gtk-icon-size: var(--notification-icon-size);
+}
+
+/* notification content title */
+.notification .summary {
+	margin-right: 8px;
+}
+
+/* notification content body */
+.notification .body {
+	margin-top: 2px;
+	color: #b2b3be;
+	font-size: 13px;
+}
+
+/* notification time passed */
+.notification .time {
+	font-size: 11px;
+	color: #65667d;
+}
+
+/* widget shared styles */
+.widget-mpris,
+.widget-volume,
+.widget-backlight {
+	padding: 0px var(--h-gap);
+	border-radius: 4px;
+}
+
+.widget-volume,
+.widget-backlight {
+	padding: 4px var(--h-gap);
+}
+
+/* volume/backlight icon */
+.widget-volume label,
+.widget-backlight label {
+	margin-right: 12px;
+	border-radius: 4px;
+}
+
+.widget-volume label:hover,
+.widget-backlight label:hover {
+	background: var(--color-btn-hover);
+}
+
+.widget-volume trough,
+.widget-backlight trough {
+	background: #7f7f8d;
+	min-height: 6px;
+	border-radius: 999px;
+}
+
+.widget-volume trough:hover,
+.widget-backlight trough:hover {
+	transform: scaleY(1.4);
+}
+
+.widget-volume highlight,
+.widget-backlight highlight {
+	background: var(--color-primary);
+}
+
+.widget-volume .toggle,
+.widget-backlight .toggle {
+	padding: 1px 2px;
+	border-radius: 4px;
+}
+
+.widget-volume .toggle:hover,
+.widget-backlight .toggle:hover {
+	background: var(--color-btn-hover);
+}
+
+/* media player widgets */
+.widget-mpris {
+	margin-top: 4px;
+}
+
+.widget-mpris .widget-mpris-player {
+	margin-top: 4px;
+	border-radius: 4px;
+}
+
+.widget-mpris .mpris-background {
+	opacity: 0.6;
+	filter: blur(8px);
+}
+
+.widget-mpris .mpris-overlay {
+	padding: 16px 16px 12px;
+	border-radius: 4px;
+}
+
+.widget-mpris .widget-mpris-title {
+	font-weight: 700;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.widget-mpris .widget-mpris-album-art {
+	border-radius: 4px;
+}
+
+/* The media player buttons (play, pause, next, etc...) */
+.widget-mpris .widget-mpris-player button {
+	margin-top: 12px;
+	padding: 8px;
+	border-radius: 4px;
+}
+
+.widget-mpris .widget-mpris-player button:hover {
+	background: var(--color-btn-hover);
+}
+
+.widget-mpris .widget-mpris-player button:disabled {
+	opacity: 0.2;
+}

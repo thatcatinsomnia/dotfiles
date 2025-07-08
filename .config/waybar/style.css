@@ -1,0 +1,140 @@
+@define-color primary #fd588a;
+@define-color text #f8f9fa;
+@define-color text-black #35373d;
+@define-color black #2d2d3b;
+@define-color bg-yellow #ffd24d;
+
+* {
+    border: none;
+    box-shadow: none; 
+    text-shadow: none;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 10px;
+}
+
+window#waybar {
+    background-color: transparent;
+    border-radius: 6px;
+    transition-property: background-color;
+    transition-duration: 200ms;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
+}
+
+#workspaces button {
+    min-width: 20px;
+    padding: 0px 4px;
+    background: @black;
+    color: @text;
+    border-radius: 0;
+    transition-duration: 200ms;
+}
+
+#workspaces button:first-child {
+    margin-right: 0px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#workspaces button:last-child {
+    margin-right: 0px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#workspaces button.active {
+    background-color: @primary;
+}
+
+#workspaces button.urgent {
+    background-color: @bg-yellow;
+    color: @text-black;
+}
+
+#cpu,
+#memory,
+#bluetooth,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#clock,
+#keyboard-state,
+#tray,
+#custom-power, 
+#custom-notification {
+    min-width: 16px;
+    margin-left: 2px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: @black;
+    color: @text;
+}
+
+
+#memory {
+    /* make icon center */
+    padding-left: 10px;
+}
+
+#memory.warning,
+#cpu.warning {
+    color: @warning;
+}
+
+#memory.critical,
+#cpu.critical {
+    color: @critical;
+}
+
+
+#pulseaudio {
+    /* make icon center */
+    padding-left: 10px;
+}
+
+#bluetooth {
+    /* make icon center */
+    padding-left: 10px;
+}
+#battery.warning { 
+    color: #ffc41f; 
+}
+
+#battery.critical {
+    color: #dd394b;
+}
+
+#battery.charging {
+    color: #18bc7b;
+}
+
+#network { 
+    /* make icon center */ 
+    padding-right: 10px; 
+}
+
+#clock {}
+
+#keyboard-state {}
+
+#keyboard-state label {}
+
+#keyboard-state label.locked {}
+
+#tray {}
+
+#custom-power {
+    font-size: 9px;
+}
+
+#custom-notification {}
+
+tooltip {
+    background-color: @black;
+}
+
+tooltip label {}
+

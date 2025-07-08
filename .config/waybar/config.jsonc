@@ -1,0 +1,180 @@
+{
+    "reload_style_on_change": true,
+    "layer": "bottom",
+    "position": "top",
+    "spacing": 0,
+    "margin-left": 4,
+    "margin-right": 4,
+    "margin-top": 4,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "memory",
+        "pulseaudio",
+        "bluetooth",
+        "battery",
+        "network",
+        // "keyboard-state",
+        "tray",
+        "clock",
+        "custom/notification",
+        "custom/power",
+    ],
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": { 
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0",
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [], "10": []
+        },
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": " muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", " "],
+        },
+        "scroll-step": 1,
+        "reverse-scrolling": 1,
+        "on-click": "/home/ruei/.config/waybar/launch-wiremix.sh",
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "󰂲",
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{device_enumerate}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias} {device_battery_percentage}%",
+        "on-click": "/home/ruei/.config/waybar/launch-bluetui.sh",
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": " {}%",
+        "spacing": 8,
+        "states": {
+            "warning": 60,
+            "critical": 90,
+        }
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": " {}%",
+        "states": {
+            "warning": 60,
+            "critical": 90,
+        },
+        "tooltip-format": "{used:0.1f} / {total:0.1f}Gib",
+        "on-click": "/home/ruei/.config/waybar/launch-btop.sh",
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": {
+            "charging": [
+                "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅" 
+            ],
+            "default": [
+                "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+            ]
+        },
+        "format-full": " Charged",
+        "interval": 5,
+        "states": {
+            "warning": 35, 
+            "critical": 20 
+        },
+    },
+
+    "network": {
+        "format-wifi": "{icon}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-ethernet": "󰀂",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "/home/ruei/.config/waybar/launch-impala.sh",
+        "interval": 5,
+        "nospacing": 1,
+    },
+
+    "clock": {
+        "format": "{:%Y/%m/%d %H:%M}",
+        "tooltip": false,
+        "on-click": "swaync-client -t",
+    },
+
+    "keyboard-state": {
+        "numlock": false,
+        "capslock": true,
+        "format": "{icon} {name}",
+        "format-icons": {
+            "locked": "<span color='#f66e7e'></span>",
+            "unlocked": ""
+        }
+    },
+
+    "tray": {
+        "spacing": 0,
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout -b 5"
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󱏫",
+            "dnd-none": "󱏬",
+            "inhibited-notification": "󱏫",
+            "inhibited-none": "󱏬",
+            "dnd-inhibited-notification": "󱏫",
+            "dnd-inhibited-none": "󱏬"
+        },
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "exec-if": "which swaync-client",
+        "on-click": "swaync-client -t -sw",
+        "escape": true,
+    },
+}

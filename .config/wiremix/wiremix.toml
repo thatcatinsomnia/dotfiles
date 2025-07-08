@@ -1,0 +1,8 @@
+# Anything specified in the configuration file will be merged with wiremix's defaults.
+
+# Initial tab
+tab = "output"
+
+# Maximum percentage for volume sliders
+max_volume_percent = 100.0
+
