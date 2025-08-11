@@ -1,0 +1,107 @@
+app_launch_prefix = "uwsm app -- "
+close_when_open = true # open to close, close to open
+theme = "custom"
+hotreload_theme = true
+force_keyboard_focus = true
+
+[keys]
+accept_typeahead = ["tab"]
+trigger_labels = "lalt"
+next = ["ctrl j", "down"]
+prev = ["ctrl k", "up"]
+close = ["esc"]
+remove_from_history = ["shift backspace"]
+resume_query = ["ctrl r"]
+toggle_exact_search = ["ctrl m"]
+
+[keys.activation_modifiers]
+
+[keys.ai]
+
+[events]
+
+[list]
+cycle = true # back to first item after last one
+ max_entries = 100
+placeholder = "No Results"
+
+[search]
+placeholder = "    Search..."
+
+[activation_mode]
+disabled = true
+
+[builtins.hyprland_keybinds]
+show_sub_when_single = true
+weight = 5
+name = "hyprland_keybinds"
+placeholder = "Hyprland Keybinds"
+switcher_only = true
+
+[builtins.applications]
+weight = 5
+name = "applications"
+placeholder = "    Applications"
+prioritize_new = false
+context_aware = false
+refresh = true
+show_sub_when_single = false
+history = true
+icon = ""
+
+[builtins.applications.actions]
+enabled = false
+hide_category = true
+
+[builtins.bookmarks]
+hidden = true
+
+[builtins.xdph_picker]
+hidden = true
+
+[builtins.ai]
+hidden = true
+
+[[builtins.ai.anthropic.prompts]]
+
+[builtins.calc]
+hidden = true
+
+[builtins.windows]
+hidden = true
+
+[builtins.clipboard]
+hidden = true
+
+[builtins.commands]
+hidden = true
+
+[builtins.custom_commands]
+hidden = true
+
+[builtins.emojis]
+hidden = true
+
+[builtins.symbols]
+hidden = true
+
+[builtins.finder]
+hidden = true
+
+[builtins.runner]
+hidden = true
+
+[builtins.ssh]
+hidden = true
+
+[builtins.switcher]
+hidden = true
+
+[builtins.websearch]
+hidden = true
+
+[builtins.dmenu]
+hidden = true
+
+[builtins.translation]
+hidden = true

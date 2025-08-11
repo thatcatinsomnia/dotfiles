@@ -1,0 +1,13 @@
+[ui.window.box]
+width = 560
+
+[ui.window.box.scroll.list]
+marker_color = "#fD588a"
+max_height = 360
+max_width = 400
+min_width = 400
+width = 400
+
+[ui.window.box.scroll.list.item.icon]
+pixel_size = 24 # list item icon size
+

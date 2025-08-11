@@ -1,0 +1,154 @@
+@define-color base #1e1e2e;
+@define-color text #cdd6f4;
+@define-color mantle #181825;
+@define-color hover #313244;
+@define-color red #f38ba8;
+
+#window,
+#box,
+#aiScroll,
+#aiList,
+#search,
+#password,
+#input,
+#prompt,
+#clear,
+#typeahead,
+#list,
+child,
+scrollbar,
+slider,
+#item,
+#text,
+#label,
+#bar,
+#sub,
+#activationlabel {
+    all: unset;
+}
+
+#cfgerr {
+    background: @red;
+    margin-top: 20px;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+/* the wrapper of launcher */
+#window {
+    color: @text;
+}
+
+/* the launcher itself */
+#box {
+    padding: 8px;
+    border-radius: 4px;
+    background: @base;
+}
+
+/* search bar box */
+#search {
+    padding: 12px 8px;
+    background: @mantle;
+    border-radius: 4px;
+}
+
+#prompt {
+    margin-right: 8px;
+    color: @text;
+    opacity: 0.2;
+}
+
+/* backspace icon */
+#clear {}
+
+#password,
+#input,
+#typeahead {
+    border-radius: 4px;
+}
+
+
+/* search bar input */
+#input {
+    background: none;
+}
+
+#password {}
+
+#spinner {
+    padding: 8px;
+}
+
+#typeahead {
+    color: @text;
+    opacity: 0.8;
+}
+
+/* search input placeholder */
+#input placeholder {
+    opacity: 0.4;
+}
+
+/* item list below search box */
+#list {
+    padding-top: 8px;
+}
+
+/* no result box */
+#listplaceholder {
+    padding: 24px 8px;
+    opacity: 0.6;
+}
+
+/* the list item wrapper */
+child {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+child:selected,
+child:hover {
+    background: alpha(@hover, 0.4);
+}
+
+/* list item */
+#item {
+}
+
+/* icon of list item */
+#icon {
+    margin-right: 12px;
+}
+
+/* parent of #label & #sub */
+#text {
+    color: @text;
+}
+
+/* list item title */
+#label {
+    font-weight: 500;
+}
+
+/* list item sub title */
+#sub {
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+#bar {
+}
+
+.barentry {
+}
+
+.activation #activationlabel {
+}
+
+.activation #text,
+.activation #icon,
+.activation #search {
+    opacity: 0.5;
+}
