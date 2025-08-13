@@ -11,3 +11,6 @@ width = 400
 [ui.window.box.scroll.list.item.icon]
 pixel_size = 24 # list item icon size
 
+[ui.window.box.scroll.list.item.activation_label]
+hide = true
+

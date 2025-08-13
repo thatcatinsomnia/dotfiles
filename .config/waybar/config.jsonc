@@ -18,10 +18,9 @@
         "network",
         "keyboard-state",
         "tray",
-        "clock",
         "battery",
+        "clock",
         "custom/notification",
-        "custom/power",
     ],
 
     "hyprland/workspaces": {
@@ -69,7 +68,7 @@
         },
         "scroll-step": 1,
         "reverse-scrolling": 1,
-        "on-click": "/home/ruei/.config/waybar/launch-wiremix.sh",
+        "on-click": "ghostty --title='Wiremix' -e wiremix",
     },
 
     "backlight": {
@@ -85,7 +84,7 @@
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-connected": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias} {device_battery_percentage}%",
-        "on-click": "/home/ruei/.config/waybar/launch-bluetui.sh",
+        "on-click": "ghostty --title='Bluetui' -e bluetui",
     },
 
     "cpu": {
@@ -93,7 +92,7 @@
         "format": " {}%",
         "spacing": 8,
         "states": {
-            "warning": 60,
+            "warning": 70,
             "critical": 90,
         }
     },
@@ -102,11 +101,24 @@
         "interval": 10,
         "format": " {}%",
         "states": {
-            "warning": 60,
+            "warning": 70,
             "critical": 90,
         },
         "tooltip-format": "{used:0.1f} / {total:0.1f}Gib",
-        "on-click": "/home/ruei/.config/waybar/launch-btop.sh",
+        "on-click": "ghostty --title='btop' -e btop",
+    },
+
+    "network": {
+        "format-wifi": "{icon}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-ethernet": "󰀂",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "ghostty --title=Impala -e impala",
+        "interval": 5,
+        "nospacing": 1,
     },
 
     "battery": {
@@ -127,25 +139,6 @@
         },
     },
 
-    "network": {
-        "format-wifi": "{icon}",
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-        "format-ethernet": "󰀂",
-        "format-disconnected": "󰖪",
-        "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-        "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-        "tooltip-format-disconnected": "Disconnected",
-        "on-click": "/home/ruei/.config/waybar/launch-impala.sh",
-        "interval": 5,
-        "nospacing": 1,
-    },
-
-    "clock": {
-        "format": "{:%Y/%m/%d %H:%M}",
-        "tooltip": false,
-        "on-click": "swaync-client -t",
-    },
-
     "keyboard-state": {
         "numlock": false,
         "capslock": true,
@@ -160,10 +153,10 @@
         "spacing": 0,
     },
 
-    "custom/power": {
-        "format": "",
+    "clock": {
+        "format": "{:%Y/%m/%d %H:%M}",
         "tooltip": false,
-        "on-click": "wlogout -b 5"
+        "on-click": "swaync-client -t",
     },
 
     "custom/notification": {

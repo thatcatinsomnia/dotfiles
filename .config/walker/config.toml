@@ -13,7 +13,6 @@ close = ["esc"]
 remove_from_history = ["shift backspace"]
 resume_query = ["ctrl r"]
 toggle_exact_search = ["ctrl m"]
-
 [keys.activation_modifiers]
 
 [keys.ai]
@@ -22,7 +21,7 @@ toggle_exact_search = ["ctrl m"]
 
 [list]
 cycle = true # back to first item after last one
- max_entries = 100
+max_entries = 200
 placeholder = "No Results"
 
 [search]
@@ -81,6 +80,7 @@ hidden = true
 
 [builtins.emojis]
 hidden = true
+max_entries = 200
 
 [builtins.symbols]
 hidden = true
@@ -105,3 +105,33 @@ hidden = true
 
 [builtins.translation]
 hidden = true
+
+# custom plugins, run with command: walker -m power
+[[plugins]]
+keep_sort = false
+name = "power"
+placeholder = "Power"
+recalculate_score = true
+show_icon_when_single = true
+switcher_only = true
+
+[[plugins.entries]]
+exec = "systemctl shutdown now"
+icon = "system-shutdown"
+label = "Shutdown"
+
+[[plugins.entries]]
+exec = "systemctl suspend"
+icon = "system-suspend"
+label = "Suspend"
+
+[[plugins.entries]]
+exec = "systemctl reboot"
+icon = "system-reboot"
+label = "Reboot"
+
+[[plugins.entries]]
+exec = "playerctl --all-players pause & hyprlock"
+icon = "system-lock-screen"
+label = "Lock"
+
