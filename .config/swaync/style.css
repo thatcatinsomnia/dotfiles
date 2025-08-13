@@ -1,6 +1,6 @@
 :root {
 	--h-gap: 12px;
-	--notification-icon-size: 64px;
+	--notification-icon-size: 36px;
 
 	--color-green: #a1ea9b;
 	--color-white: #f6f7fa;
@@ -147,7 +147,7 @@
 
 /* each notification item */
 .notification {
-	padding: 8px 20px;
+	padding: 12px 20px;
 	background: #363644;
 	border-radius: 4px;
 	min-height: 40px;
@@ -155,7 +155,7 @@
 }
 
 .notification .notification-content .image {
-	margin-right: 8px;
+	margin-right: 12px;
 	border-radius: 6px;
 	-gtk-icon-size: var(--notification-icon-size);
 }

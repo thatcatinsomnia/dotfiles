@@ -13,12 +13,13 @@
     "modules-right": [
         "memory",
         "pulseaudio",
+        "backlight",
         "bluetooth",
-        "battery",
         "network",
-        // "keyboard-state",
+        "keyboard-state",
         "tray",
         "clock",
+        "battery",
         "custom/notification",
         "custom/power",
     ],
@@ -47,14 +48,15 @@
             "6": [],
             "7": [],
             "8": [],
-            "9": [], "10": []
+            "9": [], 
+            "10": [],
         },
     },
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": " muted",
+        "format-muted": "󰖁 off",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -63,11 +65,17 @@
             "phone-muted": "",
             "portable": "",
             "car": "",
-            "default": ["", "", " "],
+            "default": ["󰕿", "󰖀", "󰕾"],
         },
         "scroll-step": 1,
         "reverse-scrolling": 1,
         "on-click": "/home/ruei/.config/waybar/launch-wiremix.sh",
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": "󰃟"
     },
 
     "bluetooth": {
