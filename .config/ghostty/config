@@ -30,9 +30,6 @@ shell-integration-features = no-cursor
  
 
 # background
-background-opacity = 0.9
-background-blur = true
-
 
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
@@ -56,3 +53,13 @@ background-blur = true
 keybind = shift+enter=text:\n
 keybind = ctrl+shift+n=unbind
 
+# unbind tab keybinds to prevent tmux conflict
+keybind = alt+1=unbind
+keybind = alt+2=unbind
+keybind = alt+3=unbind
+keybind = alt+4=unbind
+keybind = alt+5=unbind
+keybind = alt+6=unbind
+keybind = alt+7=unbind
+keybind = alt+8=unbind
+keybind = alt+9=unbind
